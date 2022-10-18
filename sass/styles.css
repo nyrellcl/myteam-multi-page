@@ -306,6 +306,9 @@ img {
     font-weight: 700;
     margin-bottom: 30px;
   }
+  .get-started-container a {
+    color: #002529;
+  }
   .get-started-container__btn {
     width: 153px;
     height: 48px;
