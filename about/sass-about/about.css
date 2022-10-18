@@ -542,6 +542,29 @@ img {
   .intro-container {
     background-position: 108% bottom;
   }
+  .intro-container .menu-bar {
+    width: 80%;
+  }
+  .intro-container .menu-bar__wrapper__list {
+    width: 10%;
+    margin-left: 5%;
+    gap: 40px;
+  }
+  .intro-container .menu-bar__wrapper__list a {
+    transition: all 250ms ease-in-out;
+  }
+  .intro-container .menu-bar__wrapper__list a:not([disabled]):hover {
+    cursor: pointer;
+    color: #f67e7e;
+  }
+  .intro-container .menu-bar__wrapper .contact-btn {
+    transition: all 250ms ease-in-out;
+  }
+  .intro-container .menu-bar__wrapper .contact-btn:not([disabled]):hover {
+    cursor: pointer;
+    background-color: white;
+    color: #002529;
+  }
   .intro-container .about-container__content {
     flex-direction: row;
   }

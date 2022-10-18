@@ -6,27 +6,27 @@
 
 @import "./mixin/mixin";
 
-#nikita{
+#nikita {
     grid-area: nikita;
 }
 
-#christian{
+#christian {
     grid-area: christian;
 }
 
-#cruz{
+#cruz {
     grid-area: cruz;
 }
 
-#drake{
+#drake {
     grid-area: drake;
 }
 
-#griffin{
+#griffin {
     grid-area: griffin;
 }
 
-#aden{
+#aden {
     grid-area: aden;
 }
 
@@ -146,21 +146,21 @@ img {
 
 
 @media only screen and (min-width: 375px) {
-    .appear{
+    .appear {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 12px;
     }
 
-    .remove{
+    .remove {
         display: none;
     }
 
-    .directors{
-        .director-grid{
-            &__card{
-                &__second__info{
+    .directors {
+        .director-grid {
+            &__card {
+                &__second__info {
                     display: none;
                     flex-direction: column;
                     align-items: center;
@@ -171,15 +171,18 @@ img {
                     text-align: center;
                     font-family: $liv, $sans;
                     transition: all 0.5s ease-in-out;
-                    h3{
+
+                    h3 {
                         color: $rapture-blue;
                     }
-                    q{
+
+                    q {
                         color: $white;
                         font-weight: 600;
                         line-height: 1.75rem;
                     }
-                    &__socials{
+
+                    &__socials {
                         display: flex;
                         align-items: center;
                         justify-content: space-evenly;
@@ -213,18 +216,22 @@ img {
 
             &__wrapper {
                 display: none;
-                &__list{
-                    a{
+
+                &__list {
+                    a {
                         transition: all 250ms ease-in-out;
-                        @include hover{
+
+                        @include hover {
                             cursor: pointer;
                             color: $light-coral;
                         }
                     }
                 }
-                .contact-btn{
+
+                .contact-btn {
                     transition: all 250ms ease-in-out;
-                    @include hover{
+
+                    @include hover {
                         cursor: pointer;
                         background-color: $white;
                         color: $dark-green;
@@ -267,39 +274,43 @@ img {
         }
     }
 
-    .directors{
+    .directors {
         background-color: $deep-jungle-green;
         background-image: url('/assets/bg-pattern-home-4-about-3.svg'), url('/assets/bg-pattern-about-2-contact-1.svg');
         background-repeat: no-repeat, no-repeat;
         background-position: bottom right, -45% -5%;
         padding-bottom: 115px;
-        .directors-heading{
+
+        .directors-heading {
             text-align: center;
             width: 90%;
             margin: 0 auto;
             padding: 88px 0 48px 0;
             margin: 0 auto;
-            h2{
+
+            h2 {
                 font-family: $liv, $sans;
                 color: $white;
                 font-size: 2rem;
             }
         }
-        .director-grid{
+
+        .director-grid {
             display: grid;
             justify-content: center;
             align-content: center;
             grid-template-columns: 0.95fr;
             grid-template-rows: repeat(6, 285px);
             row-gap: 52px;
-            grid-template-areas: 
-            "nikita"
-            "christian"
-            "cruz"
-            "drake"
-            "griffin"
-            "aden";
-            &__card{
+            grid-template-areas:
+                "nikita"
+                "christian"
+                "cruz"
+                "drake"
+                "griffin"
+                "aden";
+
+            &__card {
                 width: 90%;
                 margin: 0 auto;
                 background-color: $dark-green;
@@ -308,7 +319,8 @@ img {
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                &__info{
+
+                &__info {
                     width: 85%;
                     margin: 0 auto;
                     display: flex;
@@ -317,20 +329,24 @@ img {
                     gap: 1rem;
                     font-family: $liv, $sans;
                     color: $white;
-                    h3{
+
+                    h3 {
                         font-weight: 700;
                         color: $rapture-blue;
                     }
-                    i{
+
+                    i {
                         font-size: 15px;
                     }
-                    img{
+
+                    img {
                         border-radius: 50%;
                         width: 96px;
                         height: 96px;
                     }
                 }
-                &__icon{
+
+                &__icon {
                     position: absolute;
                     top: calc(50% - 16px/2 + 112.5px);
                     width: 56px;
@@ -342,7 +358,9 @@ img {
                     border: none;
                     background-color: $light-coral;
                     transition: all 250ms ease-in-out;
-                    &:hover,&:focus{
+
+                    &:hover,
+                    &:focus {
                         cursor: pointer;
                         background-color: $rapture-blue;
 
@@ -352,10 +370,12 @@ img {
         }
 
     }
-    .clients{
+
+    .clients {
         height: 90vh;
         background-color: $dark-green;
-        .client-heading{
+
+        .client-heading {
             width: 90%;
             margin: 0 auto;
             font-family: $liv, $sans;
@@ -363,12 +383,14 @@ img {
             text-align: center;
             padding-top: 88px;
             margin-bottom: 64px;
-            h2{
+
+            h2 {
                 font-size: 2rem;
                 font-weight: 700;
             }
         }
-        .client-list{
+
+        .client-list {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -377,9 +399,10 @@ img {
             margin: 0 auto;
             height: auto;
             gap: 64px;
-            img{
+
+            img {
                 height: auto;
-                
+
             }
         }
     }
@@ -479,19 +502,21 @@ img {
     }
 }
 
-@media only screen and (min-width: 768px){
-    .ham-container{
+@media only screen and (min-width: 768px) {
+    .ham-container {
         display: none;
     }
 
-    .intro-container{
+    .intro-container {
         background-position: 120% bottom;
-        .menu-bar{
-            &__wrapper{
+
+        .menu-bar {
+            &__wrapper {
                 display: flex;
                 align-items: center;
                 width: 100%;
-                &__list{
+
+                &__list {
                     display: flex;
                     align-items: center;
                     justify-content: space-evenly;
@@ -500,12 +525,14 @@ img {
                     color: $white;
                     width: 40%;
                     margin-right: auto;
-                    a{
+
+                    a {
                         font-weight: 600;
                         color: $white;
                     }
                 }
-                .contact-btn{
+
+                .contact-btn {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -514,12 +541,13 @@ img {
             }
         }
 
-        .about-container{
-            &__content{
-                h1{
+        .about-container {
+            &__content {
+                h1 {
                     font-size: 64px;
                 }
-                p{
+
+                p {
                     width: 67%;
                     margin: 0 auto;
                     line-height: 1.75rem;
@@ -528,51 +556,56 @@ img {
         }
     }
 
-    .directors{
+    .directors {
         background-position: bottom right, -15% -5%;
-        .director-grid{
+
+        .director-grid {
             grid-template-columns: repeat(2, 00.95fr);
             grid-template-rows: repeat(3, 300px);
-            grid-template-areas: 
-            "nikita christian"
-            "cruz drake"
-            "griffin aden";
+            grid-template-areas:
+                "nikita christian"
+                "cruz drake"
+                "griffin aden";
         }
     }
 
-    .clients{
+    .clients {
         height: 41vh;
         background-image: url('/assets/bg-pattern-about-4.svg');
         background-repeat: no-repeat;
         background-position-y: -90%;
-        .client-list{
+
+        .client-list {
             flex-direction: row;
             width: 90%;
             margin: 0 auto;
             gap: 0;
             justify-content: space-evenly;
-            img{
+
+            img {
                 width: 100px;
             }
         }
     }
 
-    .get-started-container{
+    .get-started-container {
         height: 35vh;
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
         background-position: 0px 120px;
-        h5{
+
+        h5 {
             margin: 0;
             width: 45%;
         }
     }
 
-    .footer-container{
+    .footer-container {
         height: 44vh;
         position: relative;
-        &__menu{
+
+        &__menu {
             position: absolute;
             width: 14%;
             right: 84.47%;
@@ -580,14 +613,17 @@ img {
             left: 5%;
             bottom: 0%;
             gap: 53px;
-            &__logo{
+
+            &__logo {
                 margin-top: 56px;
             }
-            &__list{
+
+            &__list {
                 gap: 24px;
             }
         }
-        &__information{
+
+        &__information {
             position: absolute;
             width: 36%;
             align-items: flex-end;
@@ -597,13 +633,15 @@ img {
             bottom: 0%;
             margin: 0;
         }
-        &__socials{
+
+        &__socials {
             position: absolute;
             top: 70%;
             width: 14%;
             left: 5%;
         }
-        &__rights{
+
+        &__rights {
             position: absolute;
             width: 33%;
             top: 70%;
@@ -612,51 +650,90 @@ img {
     }
 }
 
-@media only screen and (min-width: 1440px){
-    .intro-container{
+@media only screen and (min-width: 1440px) {
+    .intro-container {
         background-position: 108% bottom;
-        .about-container{
-            &__content{
+
+        .menu-bar {
+            width: 80%;
+
+            &__wrapper {
+                &__list {
+                    width: 10%;
+                    margin-left: 5%;
+                    gap: 40px;
+
+                    a {
+                        transition: all 250ms ease-in-out;
+
+                        @include hover {
+                            cursor: pointer;
+                            color: $light-coral;
+                        }
+                    }
+                }
+
+                .contact-btn {
+                    transition: all 250ms ease-in-out;
+
+                    @include hover {
+                        cursor: pointer;
+                        background-color: $white;
+                        color: $dark-green;
+                    }
+                }
+            }
+        }
+
+        .about-container {
+            &__content {
                 flex-direction: row;
-                h1{
+
+                h1 {
                     font-size: 100px;
                 }
-                p{
+
+                p {
                     text-align: left;
                 }
             }
         }
     }
 
-    .directors{
+    .directors {
         background-position: bottom right, -8% -5%;
-        .directors-heading{
-            h2{
+
+        .directors-heading {
+            h2 {
                 font-size: 3rem;
             }
         }
-        .director-grid{
+
+        .director-grid {
             grid-template-rows: repeat(2, 300px);
             grid-template-columns: repeat(3, 0.95fr);
-            grid-template-areas: 
-            "nikita christian cruz"
-            "drake griffin aden";
+            grid-template-areas:
+                "nikita christian cruz"
+                "drake griffin aden";
             width: 80%;
             margin: 0 auto;
         }
     }
 
-    .clients{
+    .clients {
         height: 61vh;
         background-position-y: -38%;
-        .client-heading{
-            h2{
+
+        .client-heading {
+            h2 {
                 font-size: 3rem;
             }
         }
-        .client-list{
+
+        .client-list {
             width: 80%;
-            img{
+
+            img {
                 width: 15%;
             }
         }
@@ -668,13 +745,15 @@ img {
 
 
 
-    .get-started-container{
-        h5{
+    .get-started-container {
+        h5 {
             font-size: 3rem;
         }
-        &__btn{
+
+        &__btn {
             transition: all 250ms ease-in-out;
-            @include hover{
+
+            @include hover {
                 cursor: pointer;
                 background-color: $dark-green;
                 color: $white;
@@ -682,32 +761,38 @@ img {
         }
     }
 
-    .footer-container{
+    .footer-container {
         height: 26vh;
-        &__menu{
+
+        &__menu {
             gap: 25px;
-            &__list{
-                a{
+
+            &__list {
+                a {
                     transition: all 250ms ease-in-out;
-                    @include hover{
+
+                    @include hover {
                         cursor: pointer;
                         color: $light-coral;
                     }
                 }
             }
         }
-        &__information{
+
+        &__information {
             left: 29.04%;
             width: 40%;
             align-items: flex-start;
             top: 5%;
         }
-        &__socials{
+
+        &__socials {
             right: 8%;
             left: auto;
             top: 30%;
-            img{
-                @include hover{
+
+            img {
+                @include hover {
                     cursor: pointer;
                 }
             }
