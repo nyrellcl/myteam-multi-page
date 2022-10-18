@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./sass/styles.css">
+  <title>Frontend Mentor | myteam website challenge - Homepage</title>
+</head>
+
+<body>
+  <main>
+    <section class="intro-container">
+      <header>
+        <nav class="menu-bar">
+          <div class="menu-bar__logo">
+            <img src="./assets/logo.svg" alt="myteam-logo" srcset="./assets/logo.svg 128w, ./assets/logo.svg 160w"
+              sizes="(min-width: 375px) 128px, (min-width:1200px) 160px">
+          </div>
+
+          <div class="ham-container">
+            <div id="ham-icon" onclick="toggleMobileMenu(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+              <ul class="mobile-menu">
+                <li><a href="/">home</a></li>
+                <li><a href="./about/about.html">about</a></li>
+                <a href="/contact/contact.html"><button type="button" class="contact-btn">contact Us</button></a>
+              </ul>
+            </div>
+          </div>
+
+          <div class="menu-bar__wrapper">
+          <ul class="menu-bar__wrapper__list">
+            <li><a href="/">home</a></li>
+            <li><a href="./about/about.html">about</a></li>
+          </ul>
+          <a href="/contact/contact.html"><div class="contact-btn">contact us</div></a>
+          </div>
+        </nav>
+      </header>
+
+      <section id="talent">
+        <article class="talent-container">
+          <div class="talent-container__content">
+            <h1>Find the best <span class="highlight">talent</span></h1>
+            <p>Finding the right people and building high performing teams can be hard. Most companies aren't tapping
+              into the abundance of global talent. We're about to change that.
+            </p>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <section id="features">
+      <article class="features-container">
+        <div class="features-container__heading">
+          <div class="line"></div>
+          <h2>Build & manage distributed teams like no one else.</h2>
+        </div>
+
+        <div class="features-container__wrapper">
+          <div class="features-container__wrapper__card">
+            <div class="features-container__wrapper__card__icon">
+              <img src="./assets/icon-person.svg" alt="icon-person">
+            </div>
+            <div class="features-container__wrapper__card__content">
+              <h3>Experienced Individuals</h3>
+              <p>Our network is made up of highly experienced professionals who are passionate about what they do.</p>
+            </div>
+          </div>
+
+          <div class="features-container__wrapper__card">
+            <div class="features-container__wrapper__card__icon">
+              <img src="./assets/icon-cog.svg" alt="icon-cog">
+            </div>
+            <div class="features-container__wrapper__card__content">
+              <h3>Easy to Implement</h3>
+              <p>Our processes have been refined over years of implementation meaning our teams always deliver.</p>
+            </div>
+          </div>
+
+          <div class="features-container__wrapper__card">
+            <div class="features-container__wrapper__card__icon">
+              <img src="./assets/icon-chart.svg" alt="icon-chart">
+            </div>
+            <div class="features-container__wrapper__card__content">
+              <h3>Enhanced Productivity</h3>
+              <p>Our customized platform with in-built analytics helps you manage your distributed teams.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="reviews">
+      <article class="review-heading">
+        <h2>Delivering real results for top companies. Some of our <span class="review-highlight">success
+            stories</span></h2>
+      </article>
+
+      <article class="review-container">
+
+        <div class="review-container__card">
+          <q>The team perfectly fit the specialized skill set required. They focused on the most essential features
+            helping us launch the platform eight months faster than planned.</q>
+          <h4>Kady Baker</h4>
+          <i>Product Manager at Bookmark</i>
+          <div class="review-container__card__profile">
+            <img src="./assets/avatar-kady.jpg" alt="avatar-kady">
+          </div>
+        </div>
+
+        <div class="review-container__card">
+          <q>We needed to automate our entire onboarding process. The team came in and built out the whole journey.
+            Since going live, user retention has gone through the roof.</q>
+          <h4>Aiysha Reese</h4>
+          <i>Founder of Manage</i>
+          <div class="review-container__card__profile">
+            <img src="./assets/avatar-aiysha.jpg" alt="avatar-aiysha">
+          </div>
+        </div>
+
+        <div class="review-container__card">
+          <q>Amazing. Our team helped us build an app that delivered a new experience gor hiring a physio. The launch
+            was an instant success with 100k downloads in the first month.</q>
+          <h4>Arthur Clarke</h4>
+          <i>Co-Founder of MyPhysio</i>
+          <div class="review-container__card__profile">
+            <img src="./assets/avatar-arthur.jpg" alt="avatar-arthur">
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <article class="get-started-container">
+      <h5>Ready to get started?</h5>
+      <a href="/contact/contact.html"><button class="get-started-container__btn">
+        contact us
+      </button></a>
+    </article>
+  </main>
+
+  <footer class="footer-container">
+    <nav class="footer-container__menu">
+      <div class="footer-container__menu__logo">
+        <img src="./assets/logo.svg" alt="logo">
+      </div>
+      <ul class="footer-container__menu__list">
+        <li><a href="/">home</a></li>
+        <li><a href="./about/about.html">about</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-container__information">
+      <p>987 Hillcrest Lane</p>
+      <p>Irvine, CA</p>
+      <p>California 92714</p>
+      <p>Call Us: 949-833-7432</p>
+    </div>
+
+    <div class="footer-container__socials">
+      <img src="./assets/icon-facebook.svg" alt="icon-facebook">
+      <img src="./assets/icon-pinterest.svg" alt="icon-pinterest">
+      <img src="./assets/icon-twitter.svg" alt="icon-twitter">
+    </div>
+
+    <div class="footer-container__rights">
+      <h6>Copyright 2020. All Rights Reserved</h6>
+    </div>
+  </footer>
+
+
+
+  <script>
+    function toggleMobileMenu(menu) {
+      menu.classList.toggle('open');
+    } /*for when the user opens the hamburger menu*/
+  </script>
+</body>
+
+</html>

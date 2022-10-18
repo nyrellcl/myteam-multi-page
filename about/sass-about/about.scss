@@ -1,0 +1,716 @@
+@import "./base/base";
+
+@import "./colors/colors";
+
+@import "./fonts/fonts";
+
+@import "./mixin/mixin";
+
+#nikita{
+    grid-area: nikita;
+}
+
+#christian{
+    grid-area: christian;
+}
+
+#cruz{
+    grid-area: cruz;
+}
+
+#drake{
+    grid-area: drake;
+}
+
+#griffin{
+    grid-area: griffin;
+}
+
+#aden{
+    grid-area: aden;
+}
+
+
+#ham-icon div {
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+    z-index: 10;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ham-container {
+    width: auto;
+}
+
+/*will rotate counterclockwise once user presses the icon which will form an X along with bar2*/
+.open {
+    .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-6px, 2px);
+        transform: rotate(-45deg) translate(-6px, 2px);
+    }
+
+    .bar2 {
+        opacity: 0;
+    }
+
+    .bar3 {
+        -webkit-transform: rotate(45deg) translate(-6px, -3px);
+        transform: rotate(45deg) translate(-6px, -3px);
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        /*stacks each link on top of each other on mobile*/
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        height: 100vh;
+        margin-left: auto;
+        top: 0;
+        width: 70%;
+        right: 0;
+        box-shadow: -1px 9px 90px 180px #2d324d59;
+        border-radius: 4px;
+        padding: 32px 0;
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: $liv, $sans;
+        background-color: $midnight-green;
+        background-image: url('/assets/bg-pattern-home-2.svg');
+        background-repeat: no-repeat;
+        background-position: 60px bottom;
+        background-size: contain;
+
+        li {
+            padding: 0.5rem;
+
+            a {
+                color: $white;
+                font-weight: 600;
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
+
+
+/*once user opens the icon the links will display in a stacked view*/
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    /*fixed height of header*/
+    left: 0;
+    height: calc(70vh - 50px);
+    /*takes the full remaining space of site hence width 100. set the height to 100 and subtract it from the height of header*/
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    /*sets the background of the menu once user opens the icon. I want to make this transition more seamless. (future update)*/
+    background-color: white;
+
+    a {
+        color: #000;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+.contact-btn {
+    width: 159px;
+    height: 48px;
+    background-color: transparent;
+    border: 2px solid $white;
+    border-radius: 24px;
+    font-family: $liv, $sans;
+    text-transform: lowercase;
+    font-weight: 600;
+    color: $white;
+    font-size: 1.125rem;
+}
+
+
+//appear info
+
+
+
+@media only screen and (min-width: 375px) {
+    .appear{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .remove{
+        display: none;
+    }
+
+    .directors{
+        .director-grid{
+            &__card{
+                &__second__info{
+                    display: none;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $dark-green;
+                    text-align: center;
+                    font-family: $liv, $sans;
+                    transition: all 0.5s ease-in-out;
+                    h3{
+                        color: $rapture-blue;
+                    }
+                    q{
+                        color: $white;
+                        font-weight: 600;
+                        line-height: 1.75rem;
+                    }
+                    &__socials{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        width: 20%;
+                        margin: 0 auto;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .intro-container {
+        background-color: $midnight-green;
+        background-image: url('/assets/bg-pattern-about-1-mobile-nav-1.svg');
+        background-repeat: no-repeat;
+        background-position: 145% 115%;
+        background-size: 200px;
+        height: 100vh;
+
+        .menu-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto;
+
+            &__logo {
+                margin: 48px 0;
+            }
+
+            &__wrapper {
+                display: none;
+                &__list{
+                    a{
+                        transition: all 250ms ease-in-out;
+                        @include hover{
+                            cursor: pointer;
+                            color: $light-coral;
+                        }
+                    }
+                }
+                .contact-btn{
+                    transition: all 250ms ease-in-out;
+                    @include hover{
+                        cursor: pointer;
+                        background-color: $white;
+                        color: $dark-green;
+                    }
+                }
+            }
+        }
+
+        .about-container {
+            width: 90%;
+            margin: 0 auto;
+
+            &__content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-family: $liv, $sans;
+                text-align: center;
+                gap: 1.125rem;
+                height: 60vh;
+                justify-content: center;
+
+                h1 {
+                    font-size: 64px;
+                    color: $white;
+                    margin: 0 auto;
+                    width: 70%;
+
+                    .highlight {
+                        color: $light-coral;
+                    }
+                }
+
+                p {
+                    color: $white;
+                    font-weight: 600;
+                    line-height: 1.75rem;
+                }
+            }
+        }
+    }
+
+    .directors{
+        background-color: $deep-jungle-green;
+        background-image: url('/assets/bg-pattern-home-4-about-3.svg'), url('/assets/bg-pattern-about-2-contact-1.svg');
+        background-repeat: no-repeat, no-repeat;
+        background-position: bottom right, -45% -5%;
+        padding-bottom: 115px;
+        .directors-heading{
+            text-align: center;
+            width: 90%;
+            margin: 0 auto;
+            padding: 88px 0 48px 0;
+            margin: 0 auto;
+            h2{
+                font-family: $liv, $sans;
+                color: $white;
+                font-size: 2rem;
+            }
+        }
+        .director-grid{
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            grid-template-columns: 0.95fr;
+            grid-template-rows: repeat(6, 285px);
+            row-gap: 52px;
+            grid-template-areas: 
+            "nikita"
+            "christian"
+            "cruz"
+            "drake"
+            "griffin"
+            "aden";
+            &__card{
+                width: 90%;
+                margin: 0 auto;
+                background-color: $dark-green;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                &__info{
+                    width: 85%;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+                    font-family: $liv, $sans;
+                    color: $white;
+                    h3{
+                        font-weight: 700;
+                        color: $rapture-blue;
+                    }
+                    i{
+                        font-size: 15px;
+                    }
+                    img{
+                        border-radius: 50%;
+                        width: 96px;
+                        height: 96px;
+                    }
+                }
+                &__icon{
+                    position: absolute;
+                    top: calc(50% - 16px/2 + 112.5px);
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    font-family: $liv, $sans;
+                    font-weight: 700;
+                    font-size: 1.75rem;
+                    border: none;
+                    background-color: $light-coral;
+                    transition: all 250ms ease-in-out;
+                    &:hover,&:focus{
+                        cursor: pointer;
+                        background-color: $rapture-blue;
+
+                    }
+                }
+            }
+        }
+
+    }
+    .clients{
+        height: 90vh;
+        background-color: $dark-green;
+        .client-heading{
+            width: 90%;
+            margin: 0 auto;
+            font-family: $liv, $sans;
+            color: $white;
+            text-align: center;
+            padding-top: 88px;
+            margin-bottom: 64px;
+            h2{
+                font-size: 2rem;
+                font-weight: 700;
+            }
+        }
+        .client-list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 43%;
+            margin: 0 auto;
+            height: auto;
+            gap: 64px;
+            img{
+                height: auto;
+                
+            }
+        }
+    }
+
+    .get-started-container {
+        background-color: $light-coral;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('/assets/bg-pattern-home-3.svg');
+        background-repeat: no-repeat;
+        background-size: 200px;
+        background-position: 0px 310px;
+
+        h5 {
+            font-family: $liv, $sans;
+            font-size: 2rem;
+            width: 80%;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        &__btn {
+            width: 153px;
+            height: 48px;
+            background-color: transparent;
+            border: 2px solid $dark-green;
+            border-radius: 24px;
+            font-family: $liv, $sans;
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+    }
+
+    .footer-container {
+        height: 55vh;
+        background-color: $dark-green;
+        width: 100%;
+        font-family: $liv, $sans;
+
+        &__menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+
+            &__logo {
+                margin-top: 66px;
+                width: 96px;
+            }
+
+            &__list {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 50%;
+
+                a {
+                    color: $white;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &__information {
+            color: $rapture-blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.75rem;
+            margin: 24px auto 40px auto;
+            font-weight: 600;
+            opacity: 0.6;
+        }
+
+        &__socials {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 30%;
+            margin: 0 auto 16px auto;
+        }
+
+        &__rights {
+            text-align: center;
+            font-weight: 600;
+            color: $rapture-blue;
+            font-size: 15px;
+            opacity: 0.6;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .ham-container{
+        display: none;
+    }
+
+    .intro-container{
+        background-position: 120% bottom;
+        .menu-bar{
+            &__wrapper{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                &__list{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    list-style: none;
+                    font-family: $liv, $sans;
+                    color: $white;
+                    width: 40%;
+                    margin-right: auto;
+                    a{
+                        font-weight: 600;
+                        color: $white;
+                    }
+                }
+                .contact-btn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+            }
+        }
+
+        .about-container{
+            &__content{
+                h1{
+                    font-size: 64px;
+                }
+                p{
+                    width: 67%;
+                    margin: 0 auto;
+                    line-height: 1.75rem;
+                }
+            }
+        }
+    }
+
+    .directors{
+        background-position: bottom right, -15% -5%;
+        .director-grid{
+            grid-template-columns: repeat(2, 00.95fr);
+            grid-template-rows: repeat(3, 300px);
+            grid-template-areas: 
+            "nikita christian"
+            "cruz drake"
+            "griffin aden";
+        }
+    }
+
+    .clients{
+        height: 41vh;
+        background-image: url('/assets/bg-pattern-about-4.svg');
+        background-repeat: no-repeat;
+        background-position-y: -90%;
+        .client-list{
+            flex-direction: row;
+            width: 90%;
+            margin: 0 auto;
+            gap: 0;
+            justify-content: space-evenly;
+            img{
+                width: 100px;
+            }
+        }
+    }
+
+    .get-started-container{
+        height: 35vh;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        background-position: 0px 120px;
+        h5{
+            margin: 0;
+            width: 45%;
+        }
+    }
+
+    .footer-container{
+        height: 44vh;
+        position: relative;
+        &__menu{
+            position: absolute;
+            width: 14%;
+            right: 84.47%;
+            top: -40%;
+            left: 5%;
+            bottom: 0%;
+            gap: 53px;
+            &__logo{
+                margin-top: 56px;
+            }
+            &__list{
+                gap: 24px;
+            }
+        }
+        &__information{
+            position: absolute;
+            width: 36%;
+            align-items: flex-end;
+            left: 59.36%;
+            right: 0%;
+            top: -18%;
+            bottom: 0%;
+            margin: 0;
+        }
+        &__socials{
+            position: absolute;
+            top: 70%;
+            width: 14%;
+            left: 5%;
+        }
+        &__rights{
+            position: absolute;
+            width: 33%;
+            top: 70%;
+            right: 0%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .intro-container{
+        background-position: 108% bottom;
+        .about-container{
+            &__content{
+                flex-direction: row;
+                h1{
+                    font-size: 100px;
+                }
+                p{
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .directors{
+        background-position: bottom right, -8% -5%;
+        .directors-heading{
+            h2{
+                font-size: 3rem;
+            }
+        }
+        .director-grid{
+            grid-template-rows: repeat(2, 300px);
+            grid-template-columns: repeat(3, 0.95fr);
+            grid-template-areas: 
+            "nikita christian cruz"
+            "drake griffin aden";
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    .clients{
+        height: 61vh;
+        background-position-y: -38%;
+        .client-heading{
+            h2{
+                font-size: 3rem;
+            }
+        }
+        .client-list{
+            width: 80%;
+            img{
+                width: 15%;
+            }
+        }
+    }
+
+
+
+
+
+
+
+    .get-started-container{
+        h5{
+            font-size: 3rem;
+        }
+        &__btn{
+            transition: all 250ms ease-in-out;
+            @include hover{
+                cursor: pointer;
+                background-color: $dark-green;
+                color: $white;
+            }
+        }
+    }
+
+    .footer-container{
+        height: 26vh;
+        &__menu{
+            gap: 25px;
+            &__list{
+                a{
+                    transition: all 250ms ease-in-out;
+                    @include hover{
+                        cursor: pointer;
+                        color: $light-coral;
+                    }
+                }
+            }
+        }
+        &__information{
+            left: 29.04%;
+            width: 40%;
+            align-items: flex-start;
+            top: 5%;
+        }
+        &__socials{
+            right: 8%;
+            left: auto;
+            top: 30%;
+            img{
+                @include hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

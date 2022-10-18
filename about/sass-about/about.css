@@ -1,0 +1,618 @@
+@import url("https://fonts.googleapis.com/css2?family=Livvic:wght@300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+#nikita {
+  grid-area: nikita;
+}
+
+#christian {
+  grid-area: christian;
+}
+
+#cruz {
+  grid-area: cruz;
+}
+
+#drake {
+  grid-area: drake;
+}
+
+#griffin {
+  grid-area: griffin;
+}
+
+#aden {
+  grid-area: aden;
+}
+
+#ham-icon div {
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.4s;
+  z-index: 10;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ham-container {
+  width: auto;
+}
+
+/*will rotate counterclockwise once user presses the icon which will form an X along with bar2*/
+.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 2px);
+}
+.open .bar2 {
+  opacity: 0;
+}
+.open .bar3 {
+  transform: rotate(45deg) translate(-6px, -3px);
+}
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  /*stacks each link on top of each other on mobile*/
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  height: 100vh;
+  margin-left: auto;
+  top: 0;
+  width: 70%;
+  right: 0;
+  box-shadow: -1px 9px 90px 180px rgba(45, 50, 77, 0.3490196078);
+  border-radius: 4px;
+  padding: 32px 0;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Livvic", sans-serif;
+  background-color: #014e56;
+  background-image: url("/assets/bg-pattern-home-2.svg");
+  background-repeat: no-repeat;
+  background-position: 60px bottom;
+  background-size: contain;
+}
+.open .mobile-menu li {
+  padding: 0.5rem;
+}
+.open .mobile-menu li a {
+  color: white;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+/*once user opens the icon the links will display in a stacked view*/
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  /*fixed height of header*/
+  left: 0;
+  height: calc(70vh - 50px);
+  /*takes the full remaining space of site hence width 100. set the height to 100 and subtract it from the height of header*/
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  /*sets the background of the menu once user opens the icon. I want to make this transition more seamless. (future update)*/
+  background-color: white;
+}
+.mobile-menu a {
+  color: #000;
+}
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+.contact-btn {
+  width: 159px;
+  height: 48px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 24px;
+  font-family: "Livvic", sans-serif;
+  text-transform: lowercase;
+  font-weight: 600;
+  color: white;
+  font-size: 1.125rem;
+}
+
+@media only screen and (min-width: 375px) {
+  .appear {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .remove {
+    display: none;
+  }
+  .directors .director-grid__card__second__info {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #002529;
+    text-align: center;
+    font-family: "Livvic", sans-serif;
+    transition: all 0.5s ease-in-out;
+  }
+  .directors .director-grid__card__second__info h3 {
+    color: #79c8c7;
+  }
+  .directors .director-grid__card__second__info q {
+    color: white;
+    font-weight: 600;
+    line-height: 1.75rem;
+  }
+  .directors .director-grid__card__second__info__socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+    margin: 0 auto;
+  }
+  .intro-container {
+    background-color: #014e56;
+    background-image: url("/assets/bg-pattern-about-1-mobile-nav-1.svg");
+    background-repeat: no-repeat;
+    background-position: 145% 115%;
+    background-size: 200px;
+    height: 100vh;
+  }
+  .intro-container .menu-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .intro-container .menu-bar__logo {
+    margin: 48px 0;
+  }
+  .intro-container .menu-bar__wrapper {
+    display: none;
+  }
+  .intro-container .menu-bar__wrapper__list a {
+    transition: all 250ms ease-in-out;
+  }
+  .intro-container .menu-bar__wrapper__list a:not([disabled]):hover {
+    cursor: pointer;
+    color: #f67e7e;
+  }
+  .intro-container .menu-bar__wrapper .contact-btn {
+    transition: all 250ms ease-in-out;
+  }
+  .intro-container .menu-bar__wrapper .contact-btn:not([disabled]):hover {
+    cursor: pointer;
+    background-color: white;
+    color: #002529;
+  }
+  .intro-container .about-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .intro-container .about-container__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Livvic", sans-serif;
+    text-align: center;
+    gap: 1.125rem;
+    height: 60vh;
+    justify-content: center;
+  }
+  .intro-container .about-container__content h1 {
+    font-size: 64px;
+    color: white;
+    margin: 0 auto;
+    width: 70%;
+  }
+  .intro-container .about-container__content h1 .highlight {
+    color: #f67e7e;
+  }
+  .intro-container .about-container__content p {
+    color: white;
+    font-weight: 600;
+    line-height: 1.75rem;
+  }
+  .directors {
+    background-color: #004047;
+    background-image: url("/assets/bg-pattern-home-4-about-3.svg"), url("/assets/bg-pattern-about-2-contact-1.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, -45% -5%;
+    padding-bottom: 115px;
+  }
+  .directors .directors-heading {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 88px 0 48px 0;
+    margin: 0 auto;
+  }
+  .directors .directors-heading h2 {
+    font-family: "Livvic", sans-serif;
+    color: white;
+    font-size: 2rem;
+  }
+  .directors .director-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 0.95fr;
+    grid-template-rows: repeat(6, 285px);
+    row-gap: 52px;
+    grid-template-areas: "nikita" "christian" "cruz" "drake" "griffin" "aden";
+  }
+  .directors .director-grid__card {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #002529;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .directors .director-grid__card__info {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Livvic", sans-serif;
+    color: white;
+  }
+  .directors .director-grid__card__info h3 {
+    font-weight: 700;
+    color: #79c8c7;
+  }
+  .directors .director-grid__card__info i {
+    font-size: 15px;
+  }
+  .directors .director-grid__card__info img {
+    border-radius: 50%;
+    width: 96px;
+    height: 96px;
+  }
+  .directors .director-grid__card__icon {
+    position: absolute;
+    top: calc(50% - 8px + 112.5px);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    border: none;
+    background-color: #f67e7e;
+    transition: all 250ms ease-in-out;
+  }
+  .directors .director-grid__card__icon:hover, .directors .director-grid__card__icon:focus {
+    cursor: pointer;
+    background-color: #79c8c7;
+  }
+  .clients {
+    height: 90vh;
+    background-color: #002529;
+  }
+  .clients .client-heading {
+    width: 90%;
+    margin: 0 auto;
+    font-family: "Livvic", sans-serif;
+    color: white;
+    text-align: center;
+    padding-top: 88px;
+    margin-bottom: 64px;
+  }
+  .clients .client-heading h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .clients .client-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 43%;
+    margin: 0 auto;
+    height: auto;
+    gap: 64px;
+  }
+  .clients .client-list img {
+    height: auto;
+  }
+  .get-started-container {
+    background-color: #f67e7e;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/bg-pattern-home-3.svg");
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: 0px 310px;
+  }
+  .get-started-container h5 {
+    font-family: "Livvic", sans-serif;
+    font-size: 2rem;
+    width: 80%;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  .get-started-container__btn {
+    width: 153px;
+    height: 48px;
+    background-color: transparent;
+    border: 2px solid #002529;
+    border-radius: 24px;
+    font-family: "Livvic", sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+  .footer-container {
+    height: 55vh;
+    background-color: #002529;
+    width: 100%;
+    font-family: "Livvic", sans-serif;
+  }
+  .footer-container__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  .footer-container__menu__logo {
+    margin-top: 66px;
+    width: 96px;
+  }
+  .footer-container__menu__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+  }
+  .footer-container__menu__list a {
+    color: white;
+    font-weight: 600;
+  }
+  .footer-container__information {
+    color: #79c8c7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.75rem;
+    margin: 24px auto 40px auto;
+    font-weight: 600;
+    opacity: 0.6;
+  }
+  .footer-container__socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+    margin: 0 auto 16px auto;
+  }
+  .footer-container__rights {
+    text-align: center;
+    font-weight: 600;
+    color: #79c8c7;
+    font-size: 15px;
+    opacity: 0.6;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .ham-container {
+    display: none;
+  }
+  .intro-container {
+    background-position: 120% bottom;
+  }
+  .intro-container .menu-bar__wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .intro-container .menu-bar__wrapper__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    font-family: "Livvic", sans-serif;
+    color: white;
+    width: 40%;
+    margin-right: auto;
+  }
+  .intro-container .menu-bar__wrapper__list a {
+    font-weight: 600;
+    color: white;
+  }
+  .intro-container .menu-bar__wrapper .contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .intro-container .about-container__content h1 {
+    font-size: 64px;
+  }
+  .intro-container .about-container__content p {
+    width: 67%;
+    margin: 0 auto;
+    line-height: 1.75rem;
+  }
+  .directors {
+    background-position: bottom right, -15% -5%;
+  }
+  .directors .director-grid {
+    grid-template-columns: repeat(2, 0.95fr);
+    grid-template-rows: repeat(3, 300px);
+    grid-template-areas: "nikita christian" "cruz drake" "griffin aden";
+  }
+  .clients {
+    height: 41vh;
+    background-image: url("/assets/bg-pattern-about-4.svg");
+    background-repeat: no-repeat;
+    background-position-y: -90%;
+  }
+  .clients .client-list {
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    gap: 0;
+    justify-content: space-evenly;
+  }
+  .clients .client-list img {
+    width: 100px;
+  }
+  .get-started-container {
+    height: 35vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-position: 0px 120px;
+  }
+  .get-started-container h5 {
+    margin: 0;
+    width: 45%;
+  }
+  .footer-container {
+    height: 44vh;
+    position: relative;
+  }
+  .footer-container__menu {
+    position: absolute;
+    width: 14%;
+    right: 84.47%;
+    top: -40%;
+    left: 5%;
+    bottom: 0%;
+    gap: 53px;
+  }
+  .footer-container__menu__logo {
+    margin-top: 56px;
+  }
+  .footer-container__menu__list {
+    gap: 24px;
+  }
+  .footer-container__information {
+    position: absolute;
+    width: 36%;
+    align-items: flex-end;
+    left: 59.36%;
+    right: 0%;
+    top: -18%;
+    bottom: 0%;
+    margin: 0;
+  }
+  .footer-container__socials {
+    position: absolute;
+    top: 70%;
+    width: 14%;
+    left: 5%;
+  }
+  .footer-container__rights {
+    position: absolute;
+    width: 33%;
+    top: 70%;
+    right: 0%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .intro-container {
+    background-position: 108% bottom;
+  }
+  .intro-container .about-container__content {
+    flex-direction: row;
+  }
+  .intro-container .about-container__content h1 {
+    font-size: 100px;
+  }
+  .intro-container .about-container__content p {
+    text-align: left;
+  }
+  .directors {
+    background-position: bottom right, -8% -5%;
+  }
+  .directors .directors-heading h2 {
+    font-size: 3rem;
+  }
+  .directors .director-grid {
+    grid-template-rows: repeat(2, 300px);
+    grid-template-columns: repeat(3, 0.95fr);
+    grid-template-areas: "nikita christian cruz" "drake griffin aden";
+    width: 80%;
+    margin: 0 auto;
+  }
+  .clients {
+    height: 61vh;
+    background-position-y: -38%;
+  }
+  .clients .client-heading h2 {
+    font-size: 3rem;
+  }
+  .clients .client-list {
+    width: 80%;
+  }
+  .clients .client-list img {
+    width: 15%;
+  }
+  .get-started-container h5 {
+    font-size: 3rem;
+  }
+  .get-started-container__btn {
+    transition: all 250ms ease-in-out;
+  }
+  .get-started-container__btn:not([disabled]):hover {
+    cursor: pointer;
+    background-color: #002529;
+    color: white;
+  }
+  .footer-container {
+    height: 26vh;
+  }
+  .footer-container__menu {
+    gap: 25px;
+  }
+  .footer-container__menu__list a {
+    transition: all 250ms ease-in-out;
+  }
+  .footer-container__menu__list a:not([disabled]):hover {
+    cursor: pointer;
+    color: #f67e7e;
+  }
+  .footer-container__information {
+    left: 29.04%;
+    width: 40%;
+    align-items: flex-start;
+    top: 5%;
+  }
+  .footer-container__socials {
+    right: 8%;
+    left: auto;
+    top: 30%;
+  }
+  .footer-container__socials img:not([disabled]):hover {
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=about.css.map */

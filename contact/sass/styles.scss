@@ -1,0 +1,522 @@
+@import "./base/base";
+
+@import "./colors/colors";
+
+@import "./fonts/fonts";
+
+@import "./mixin/mixin";
+
+#ham-icon div {
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+    z-index: 10;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.ham-container {
+    width: auto;
+}
+
+/*will rotate counterclockwise once user presses the icon which will form an X along with bar2*/
+.open {
+    .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-6px, 2px);
+        transform: rotate(-45deg) translate(-6px, 2px);
+    }
+
+    .bar2 {
+        opacity: 0;
+    }
+
+    .bar3 {
+        -webkit-transform: rotate(45deg) translate(-6px, -3px);
+        transform: rotate(45deg) translate(-6px, -3px);
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        /*stacks each link on top of each other on mobile*/
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        height: 100vh;
+        margin-left: auto;
+        top: 0;
+        width: 70%;
+        right: 0;
+        box-shadow: -1px 9px 90px 180px #2d324d59;
+        border-radius: 4px;
+        padding: 32px 0;
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: $liv, $sans;
+        background-color: $midnight-green;
+        background-image: url('/assets/bg-pattern-home-2.svg');
+        background-repeat: no-repeat;
+        background-position: 60px bottom;
+        background-size: contain;
+
+        li {
+            padding: 0.5rem;
+
+            a {
+                color: $white;
+                font-weight: 600;
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
+
+
+/*once user opens the icon the links will display in a stacked view*/
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    /*fixed height of header*/
+    left: 0;
+    height: calc(70vh - 50px);
+    /*takes the full remaining space of site hence width 100. set the height to 100 and subtract it from the height of header*/
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    /*sets the background of the menu once user opens the icon. I want to make this transition more seamless. (future update)*/
+    background-color: white;
+
+    a {
+        color: #000;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+.contact-btn {
+    width: 159px;
+    height: 48px;
+    background-color: transparent;
+    border: 2px solid $white;
+    border-radius: 24px;
+    font-family: $liv, $sans;
+    text-transform: lowercase;
+    font-weight: 600;
+    color: $white;
+    font-size: 1.125rem;
+}
+
+@media only screen and (min-width: 375px) {
+    .main-background {
+        background-color: $midnight-green;
+        background-image: url('/assets/bg-pattern-contact-2.svg');
+        background-repeat: no-repeat;
+        background-position: 275px 1040px;
+        background-size: 225px;
+        position: relative;
+
+        .desktop-bg {
+            display: none;
+        }
+
+        .intro-container {
+            height: auto;
+            .menu-bar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 90%;
+                margin: 0 auto;
+
+                &__logo {
+                    margin: 48px 0;
+                }
+
+                &__wrapper {
+                    display: none;
+                }
+            }
+        }
+
+        .contact-container {
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 56px;
+
+            &__content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                font-family: $liv, $sans;
+
+                h1 {
+                    color: $white;
+                    font-weight: 700;
+                    font-size: 40px;
+                }
+
+                h2 {
+                    color: $light-coral;
+                    font-size: 2rem;
+                    font-weight: 700;
+                }
+            }
+
+            &__services {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 24px;
+                margin-top: 3rem;
+
+                &__card {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: center;
+
+                    &__content {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        font-family: $liv, $sans;
+                        justify-content: space-between;
+
+                        p {
+                            font-size: 1.125rem;
+                            font-weight: 700;
+                            color: $white;
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .form-container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-family: $liv, $sans;
+            padding-bottom: 88px;
+
+            label {
+                color: $rapture-blue;
+                font-weight: 600;
+            }
+
+            input[type=text],
+            input[type=email],
+            textarea {
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $white;
+                color: white;
+                font-size: 1.125rem;
+                font-family: $liv, $sans;
+            }
+
+            button[type=submit] {
+                width: 123px;
+                height: 48px;
+                border-radius: 24px;
+                border: none;
+                background-color: $white;
+                color: $dark-green;
+                font-size: 1.125rem;
+                font-family: $liv, $sans;
+                font-weight: 600;
+            }
+        }
+
+    }
+
+    .footer-container {
+        height: 55vh;
+        background-color: $dark-green;
+        width: 100%;
+        font-family: $liv, $sans;
+
+        &__menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+
+            &__logo {
+                margin-top: 66px;
+                width: 96px;
+            }
+
+            &__list {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 50%;
+
+                a {
+                    color: $white;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &__information {
+            color: $rapture-blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.75rem;
+            margin: 24px auto 40px auto;
+            font-weight: 600;
+            opacity: 0.6;
+        }
+
+        &__socials {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 30%;
+            margin: 0 auto 16px auto;
+        }
+
+        &__rights {
+            text-align: center;
+            font-weight: 600;
+            color: $rapture-blue;
+            font-size: 15px;
+            opacity: 0.6;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ham-container {
+        display: none;
+    }
+
+    .main-background {
+        background-position: 125% bottom;
+
+        .desktop-bg {
+            display: block;
+            position: absolute;
+            top: 216px;
+            left: -100px;
+        }
+
+        .intro-container{
+            .menu-bar {
+                &__wrapper {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+    
+                    &__list {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        list-style: none;
+                        font-family: $liv, $sans;
+                        color: $white;
+                        width: 40%;
+                        margin-right: auto;
+    
+                        a {
+                            font-weight: 600;
+                            color: $white;
+                        }
+                    }
+    
+                    .contact-btn {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+
+        }
+
+
+        .contact-container {
+            width: 70%;
+            margin-bottom: 88px;
+            &__content {
+                h1 {
+                    font-size: 64px;
+                }
+            }
+
+            &__services {
+                &__card {
+                    &__content {
+                        justify-content: center;
+                        gap: 24px;
+                    }
+                }
+            }
+        }
+
+        .form-container {
+            width: 70%;
+        }
+    }
+
+    .footer-container {
+        height: 44vh;
+        position: relative;
+
+        &__menu {
+            position: absolute;
+            width: 14%;
+            right: 84.47%;
+            top: -40%;
+            left: 5%;
+            bottom: 0%;
+            gap: 53px;
+
+            &__logo {
+                margin-top: 56px;
+            }
+
+            &__list {
+                gap: 24px;
+            }
+        }
+
+        &__information {
+            position: absolute;
+            width: 36%;
+            align-items: flex-end;
+            left: 59.36%;
+            right: 0%;
+            top: -18%;
+            bottom: 0%;
+            margin: 0;
+        }
+
+        &__socials {
+            position: absolute;
+            top: 70%;
+            width: 14%;
+            left: 5%;
+        }
+
+        &__rights {
+            position: absolute;
+            width: 33%;
+            top: 70%;
+            right: 0%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .main-background{
+        background-position: 110% bottom;
+        .intro-container {
+            .menu-bar {
+                width: 80%;
+    
+                &__wrapper {
+                    &__list {
+                        width: 10%;
+                        margin-left: 5%;
+                        gap: 40px;
+    
+                        a {
+                            transition: all 250ms ease-in-out;
+    
+                            @include hover {
+                                cursor: pointer;
+                                color: $light-coral;
+                            }
+                        }
+                    }
+    
+                    .contact-btn {
+                        transition: all 250ms ease-in-out;
+    
+                        @include hover {
+                            cursor: pointer;
+                            background-color: $white;
+                            color: $dark-green;
+                        }
+                    }
+                }
+            }
+        }
+
+        .flex-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0 auto;
+            .form-container{
+                width: 50%;
+            }
+            .contact-container{
+                width: 100%;
+            }
+        }
+
+    }
+
+    .footer-container {
+        height: 26vh;
+
+        &__menu {
+            gap: 25px;
+
+            &__list {
+                a {
+                    transition: all 250ms ease-in-out;
+
+                    @include hover {
+                        cursor: pointer;
+                        color: $light-coral;
+                    }
+                }
+            }
+        }
+
+        &__information {
+            left: 29.04%;
+            width: 40%;
+            align-items: flex-start;
+            top: 5%;
+        }
+
+        &__socials {
+            right: 8%;
+            left: auto;
+            top: 30%;
+
+            img {
+                @include hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
