@@ -81,7 +81,7 @@ img {
   margin-bottom: 0;
   font-family: "Livvic", sans-serif;
   background-color: #014e56;
-  background-image: url("/assets/bg-pattern-home-2.svg");
+  background-image: url("assets/bg-pattern-home-2.svg");
   background-repeat: no-repeat;
   background-position: 60px bottom;
   background-size: contain;
