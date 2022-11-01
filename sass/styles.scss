@@ -327,9 +327,6 @@ img {
             font-weight: 700;
             margin-bottom: 30px;
         }
-        a{
-            color: $dark-green;
-        }
         &__btn{
             width: 153px;
             height: 48px;
@@ -338,6 +335,7 @@ img {
             border-radius: 24px;
             font-family: $liv, $sans;
             font-weight: 600;
+            color: $dark-green;
             font-size: 1.125rem;
         }
     }
