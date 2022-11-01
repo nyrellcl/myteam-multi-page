@@ -59,12 +59,13 @@ img {
         list-style: none;
         margin-top: 0;
         margin-bottom: 0;
-        font-family: $liv, $sans;
         background-color: $midnight-green;
-        background-image: url('/assets/bg-pattern-home-2.svg');
+        background-image: url('/assets/bg-pattern-about-1-mobile-nav-1.svg');
         background-repeat: no-repeat;
-        background-position: right bottom;
-        background-size: contain;
+        background-position: 200% bottom;
+        background-size: 200px 200px;
+        font-family: $liv, $sans;
+
         li {
             padding: 0.5rem;
 
@@ -102,7 +103,7 @@ img {
     }
 }
 
-.contact-btn{
+.contact-btn {
     width: 159px;
     height: 48px;
     background-color: transparent;
@@ -116,31 +117,36 @@ img {
 }
 
 //mobile
-@media only screen and (min-width: 375px){
-    .intro-container{
+@media only screen and (min-width: 375px) {
+    .intro-container {
         background-color: $midnight-green;
         background-image: url('/assets/bg-pattern-home-2.svg');
         background-repeat: no-repeat;
         background-position: 0px bottom;
         background-size: contain;
         height: 100vh;
-        .menu-bar{
+
+        .menu-bar {
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 90%;
             margin: 0 auto;
-            &__logo{
+
+            &__logo {
                 margin: 48px 0;
             }
-            &__wrapper{
+
+            &__wrapper {
                 display: none;
             }
         }
-        .talent-container{
+
+        .talent-container {
             width: 90%;
             margin: 0 auto;
-            &__content{
+
+            &__content {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -149,16 +155,19 @@ img {
                 gap: 1.125rem;
                 height: 50vh;
                 justify-content: center;
-                h1{
+
+                h1 {
                     font-size: 2.5rem;
                     color: $white;
                     margin: 0 auto;
                     width: 70%;
-                    .highlight{
+
+                    .highlight {
                         color: $light-coral;
                     }
                 }
-                p{
+
+                p {
                     color: $white;
                     font-weight: 600;
                     line-height: 1.75rem;
@@ -166,27 +175,31 @@ img {
             }
         }
     }
+
     //features
-    .features-container{
+    .features-container {
         background-color: $deep-jungle-green;
         background-image: url('/assets/bg-pattern-home-3.svg');
         background-repeat: no-repeat;
         background-size: auto;
         background-position: 280px 0px;
-        &__heading{
+
+        &__heading {
             display: flex;
             flex-direction: column;
             gap: 32px;
             width: 65%;
             margin-left: 24px;
             margin-bottom: 56px;
-            h2{
+
+            h2 {
                 font-size: 2rem;
                 font-weight: 700;
                 font-family: $liv, $sans;
                 color: $white;
             }
-            .line{
+
+            .line {
                 width: 50px;
                 height: 4px;
                 background-color: $light-coral;
@@ -195,14 +208,16 @@ img {
             }
 
         }
-        &__wrapper{
+
+        &__wrapper {
             display: flex;
             flex-direction: column;
             gap: 3rem;
             width: 90%;
             margin: 0 auto;
             padding-bottom: 56px;
-            &__card{
+
+            &__card {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -210,7 +225,8 @@ img {
                 width: 100%;
                 margin: 0 auto;
                 gap: 16px;
-                &__content{
+
+                &__content {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -220,12 +236,14 @@ img {
                     margin: 0 auto;
                     text-align: center;
                     font-family: $liv, $sans;
-                    h3{
+
+                    h3 {
                         color: $light-coral;
                         font-size: 1.125rem;
                         font-weight: 700;
                     }
-                    p{
+
+                    p {
                         color: $rapture-blue;
                         font-weight: 600;
                         line-height: 1.75rem;
@@ -234,35 +252,39 @@ img {
             }
         }
     }
+
     //--end features--//
 
     //reviews
 
-    .reviews{
+    .reviews {
         background-color: $midnight-green;
         background-image: url('/assets/bg-pattern-home-5.svg'), url(/assets/bg-pattern-home-4-about-3.svg);
         background-repeat: no-repeat, no-repeat;
         background-position: right bottom, 0% top;
     }
-    .review-heading{
+
+    .review-heading {
         width: 90%;
         margin: 0 auto;
         font-family: $liv, $sans;
         margin-bottom: 48px;
         padding-top: 140px;
-        h4{
+
+        h4 {
             font-size: 2rem;
             font-weight: 700;
             text-align: center;
             color: $white;
-            .review-highlight{
+
+            .review-highlight {
                 color: $rapture-blue;
             }
         }
 
     }
 
-    .review-container{
+    .review-container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -271,7 +293,8 @@ img {
         margin: 0 auto;
         gap: 48px;
         padding-bottom: 164px;
-        &__card{
+
+        &__card {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -281,34 +304,39 @@ img {
             background-repeat: no-repeat;
             background-position-x: 50%;
             gap: 16px;
-            q{
+
+            q {
                 color: $white;
                 line-height: 1.75rem;
                 font-size: 15px;
                 font-weight: 600;
             }
-            h5{
+
+            h5 {
                 font-weight: 700;
                 color: $rapture-blue;
             }
-            i{
+
+            i {
                 color: $white;
                 font-size: 13px;
                 font-weight: 500;
             }
-            &__profile{
+
+            &__profile {
                 width: 62px;
                 height: 62px;
                 border: 2px solid $white;
                 border-radius: 50%;
-                img{
+
+                img {
                     border-radius: 50%;
                 }
             }
         }
     }
 
-    .get-started-container{
+    .get-started-container {
         background-color: $light-coral;
         height: 60vh;
         display: flex;
@@ -319,7 +347,8 @@ img {
         background-repeat: no-repeat;
         background-size: 200px;
         background-position: 0px 310px;
-        h5{
+
+        h5 {
             font-family: $liv, $sans;
             font-size: 2rem;
             width: 80%;
@@ -327,7 +356,8 @@ img {
             font-weight: 700;
             margin-bottom: 30px;
         }
-        &__btn{
+
+        &__btn {
             width: 153px;
             height: 48px;
             background-color: transparent;
@@ -339,34 +369,40 @@ img {
             font-size: 1.125rem;
         }
     }
-    .footer-container{
+
+    .footer-container {
         height: 55vh;
         background-color: $dark-green;
         width: 100%;
         font-family: $liv, $sans;
-        &__menu{
+
+        &__menu {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 24px;
-            &__logo{
+
+            &__logo {
                 margin-top: 66px;
                 width: 96px;
             }
-            &__list{
+
+            &__list {
                 list-style: none;
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
                 width: 50%;
-                a{
+
+                a {
                     color: $white;
                     font-weight: 600;
                 }
             }
         }
-        &__information{
+
+        &__information {
             color: $rapture-blue;
             display: flex;
             flex-direction: column;
@@ -377,7 +413,8 @@ img {
             font-weight: 600;
             opacity: 0.6;
         }
-        &__socials{
+
+        &__socials {
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -385,7 +422,7 @@ img {
             margin: 0 auto 16px auto;
         }
 
-        &__rights{
+        &__rights {
             text-align: center;
             font-weight: 600;
             color: $rapture-blue;
@@ -396,20 +433,22 @@ img {
 }
 
 //tablet
-@media only screen and (min-width: 768px){
-    .ham-container{
+@media only screen and (min-width: 768px) {
+    .ham-container {
         display: none;
     }
 
-    .intro-container{
+    .intro-container {
         background-position: 50% bottom;
         background-size: 358px;
-        .menu-bar{
-            &__wrapper{
+
+        .menu-bar {
+            &__wrapper {
                 display: flex;
                 align-items: center;
                 width: 100%;
-                &__list{
+
+                &__list {
                     display: flex;
                     align-items: center;
                     justify-content: space-evenly;
@@ -418,12 +457,14 @@ img {
                     color: $white;
                     width: 40%;
                     margin-right: auto;
-                    a{
+
+                    a {
                         font-weight: 600;
                         color: $white;
                     }
                 }
-                .contact-btn{
+
+                .contact-btn {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -432,32 +473,37 @@ img {
             }
         }
 
-        .talent-container{
-            &__content{
-                h1{
+        .talent-container {
+            &__content {
+                h1 {
                     font-size: 4rem;
                     width: 50%;
                 }
-                p{
+
+                p {
                     width: 65%;
                 }
             }
         }
     }
 
-    .features-container{
+    .features-container {
         background-position: 670px 0px;
-        &__heading{
+
+        &__heading {
             margin-left: 98px;
-            h2{
+
+            h2 {
                 font-size: 2rem;
             }
         }
-        &__wrapper{
-            &__card{
+
+        &__wrapper {
+            &__card {
                 flex-direction: row;
                 width: 75%;
-                &__content{
+
+                &__content {
                     align-items: flex-start;
                     text-align: left;
                 }
@@ -465,31 +511,34 @@ img {
         }
     }
 
-    .review-heading{
+    .review-heading {
         width: 75%;
     }
-    .review-container{
-        &__card{
+
+    .review-container {
+        &__card {
             width: 75%;
         }
     }
 
-    .get-started-container{
+    .get-started-container {
         height: 35vh;
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
         background-position: 0px 75px;
-        h5{
+
+        h5 {
             margin: 0;
             width: 45%;
         }
     }
 
-    .footer-container{
+    .footer-container {
         height: 44vh;
         position: relative;
-        &__menu{
+
+        &__menu {
             position: absolute;
             width: 14%;
             right: 84.47%;
@@ -497,14 +546,17 @@ img {
             left: 5%;
             bottom: 0%;
             gap: 53px;
-            &__logo{
+
+            &__logo {
                 margin-top: 56px;
             }
-            &__list{
+
+            &__list {
                 gap: 24px;
             }
         }
-        &__information{
+
+        &__information {
             position: absolute;
             width: 36%;
             align-items: flex-end;
@@ -514,13 +566,15 @@ img {
             bottom: 0%;
             margin: 0;
         }
-        &__socials{
+
+        &__socials {
             position: absolute;
             top: 70%;
             width: 14%;
             left: 5%;
         }
-        &__rights{
+
+        &__rights {
             position: absolute;
             width: 33%;
             top: 70%;
@@ -531,30 +585,36 @@ img {
 
 //laptop
 
-@media only screen and (min-width: 1440px){
-    .intro-container{
-        background-position: 85% bottom, -18% ;
-        background-image: url('/assets/bg-pattern-home-2.svg'), 
-        url(/assets/bg-pattern-home-1.svg);
+@media only screen and (min-width: 1440px) {
+    .intro-container {
+        background-position: 85% bottom, -18%;
+        background-image: url('/assets/bg-pattern-home-2.svg'),
+            url(/assets/bg-pattern-home-1.svg);
         background-repeat: no-repeat, no-repeat;
-        .menu-bar{
+
+        .menu-bar {
             width: 80%;
-            &__wrapper{
-                &__list{
+
+            &__wrapper {
+                &__list {
                     width: 10%;
                     margin-left: 5%;
                     gap: 40px;
-                    a{
+
+                    a {
                         transition: all 250ms ease-in-out;
-                        @include hover{
+
+                        @include hover {
                             cursor: pointer;
                             color: $light-coral;
                         }
                     }
                 }
-                .contact-btn{
+
+                .contact-btn {
                     transition: all 250ms ease-in-out;
-                    @include hover{
+
+                    @include hover {
                         cursor: pointer;
                         background-color: $white;
                         color: $dark-green;
@@ -563,18 +623,20 @@ img {
             }
         }
 
-        .talent-container{
-            &__content{
+        .talent-container {
+            &__content {
                 flex-direction: row;
                 text-align: left;
                 justify-content: center;
                 margin-top: 129px;
-                h1{
+
+                h1 {
                     font-size: 100px;
                     width: 44%;
                     margin: 0;
                 }
-                p{
+
+                p {
                     width: 30%;
                 }
             }
@@ -582,23 +644,26 @@ img {
 
     }
 
-    .features-container{
+    .features-container {
         height: 91vh;
         display: flex;
         align-items: center;
         background-position: 105% 100%;
-        &__heading{
+
+        &__heading {
             position: relative;
             top: -15%;
-            h2{
+
+            h2 {
                 font-size: 3rem;
 
             }
         }
-        &__wrapper{
-            &__card{
-                &__content{
-                    p{
+
+        &__wrapper {
+            &__card {
+                &__content {
+                    p {
                         width: 81%;
                     }
                 }
@@ -606,32 +671,37 @@ img {
         }
     }
 
-    .review-heading{
+    .review-heading {
         width: 65%;
-        h2{
+
+        h2 {
             font-size: 3rem;
         }
     }
 
-    .review-container{
+    .review-container {
         flex-direction: row;
-        &__card{
-            q{
+
+        &__card {
+            q {
                 width: 90%;
             }
-            h4{
+
+            h4 {
                 font-size: 1.125rem;
             }
         }
     }
 
-    .get-started-container{
-        h5{
+    .get-started-container {
+        h5 {
             font-size: 3rem;
         }
-        &__btn{
+
+        &__btn {
             transition: all 250ms ease-in-out;
-            @include hover{
+
+            @include hover {
                 cursor: pointer;
                 background-color: $dark-green;
                 color: $white;
@@ -639,32 +709,38 @@ img {
         }
     }
 
-    .footer-container{
+    .footer-container {
         height: 26vh;
-        &__menu{
+
+        &__menu {
             gap: 25px;
-            &__list{
-                a{
+
+            &__list {
+                a {
                     transition: all 250ms ease-in-out;
-                    @include hover{
+
+                    @include hover {
                         cursor: pointer;
                         color: $light-coral;
                     }
                 }
             }
         }
-        &__information{
+
+        &__information {
             left: 29.04%;
             width: 40%;
             align-items: flex-start;
             top: 5%;
         }
-        &__socials{
+
+        &__socials {
             right: 8%;
             left: auto;
             top: 30%;
-            img{
-                @include hover{
+
+            img {
+                @include hover {
                     cursor: pointer;
                 }
             }
