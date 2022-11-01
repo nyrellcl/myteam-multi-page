@@ -59,7 +59,7 @@ img {
   background-color: #014e56;
   background-image: url("/assets/bg-pattern-home-2.svg");
   background-repeat: no-repeat;
-  background-position: 60px 525px;
+  background-position: right bottom;
   background-size: contain;
 }
 .open .mobile-menu li {

@@ -79,12 +79,6 @@ img {
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Livvic", sans-serif;
-  background-color: #014e56;
-  background-image: url("assets/bg-pattern-home-2.svg");
-  background-repeat: no-repeat;
-  background-position: 60px bottom;
-  background-size: contain;
 }
 .open .mobile-menu li {
   padding: 0.5rem;
@@ -100,15 +94,17 @@ img {
   display: none;
   position: absolute;
   top: 50px;
-  /*fixed height of header*/
   left: 0;
   height: calc(70vh - 50px);
-  /*takes the full remaining space of site hence width 100. set the height to 100 and subtract it from the height of header*/
   width: 100%;
   margin-top: 10px;
   font-size: 1.5rem;
-  /*sets the background of the menu once user opens the icon. I want to make this transition more seamless. (future update)*/
-  background-color: white;
+  background-color: #014e56;
+  background-image: url("/assets/bg-pattern-about-1-mobile-nav-1.svg");
+  background-repeat: no-repeat;
+  background-position: 250% bottom;
+  background-size: 200px 200px;
+  font-family: "Livvic", sans-serif;
 }
 .mobile-menu a {
   color: #000;
