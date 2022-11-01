@@ -301,6 +301,7 @@ img {
     background-color: #f67e7e;
     transition: all 250ms ease-in-out;
     z-index: 5;
+    color: #002529;
   }
   .directors .director-grid__card__icon:hover, .directors .director-grid__card__icon:focus {
     cursor: pointer;
