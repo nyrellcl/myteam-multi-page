@@ -33,11 +33,11 @@ img {
     justify-content: center;
     z-index: 3;
     height: 100vh;
+    top: 0;
     position: fixed;
     right: -100%;
     width: 70%;
     list-style: none;
-    margin-top: 10px;
     font-size: 1.5rem;
     transition: all 0.3s linear;
     background-color: $midnight-green;
@@ -74,7 +74,6 @@ img {
 
     .mobile-menu {
         margin-left: auto;
-        top: 0;
         right: 0;
         box-shadow: -1px 9px 90px 180px #2d324d59;
         margin-top: 0;
