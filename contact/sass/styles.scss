@@ -7,6 +7,7 @@
 @import "./mixin/mixin";
 
 #ham-icon div {
+    position: relative;
     width: 20px;
     height: 3px;
     background-color: #fff;
