@@ -40,7 +40,6 @@ img {
 .open .mobile-menu {
   display: flex;
   flex-direction: column;
-  /*stacks each link on top of each other on mobile*/
   align-items: center;
   justify-content: center;
   z-index: 3;
@@ -55,12 +54,6 @@ img {
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Livvic", sans-serif;
-  background-color: #014e56;
-  background-image: url("/assets/bg-pattern-home-2.svg");
-  background-repeat: no-repeat;
-  background-position: 60px bottom;
-  background-size: contain;
 }
 .open .mobile-menu li {
   padding: 0.5rem;
@@ -87,9 +80,6 @@ img {
   background-position: 200% bottom;
   background-size: 200px 200px;
   font-family: "Livvic", sans-serif;
-}
-.mobile-menu a {
-  color: #000;
 }
 .mobile-menu li {
   margin-bottom: 10px;
