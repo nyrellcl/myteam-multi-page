@@ -47,6 +47,7 @@ img {
   background-position: 200% bottom;
   background-size: 200px 200px;
   font-family: "Livvic", sans-serif;
+  gap: 1rem;
 }
 .mobile-menu li {
   padding: 0.5rem;
