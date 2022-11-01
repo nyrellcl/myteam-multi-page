@@ -146,54 +146,8 @@ img {
 
 
 @media only screen and (min-width: 375px) {
-    .appear {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-    }
 
-    .remove {
-        display: none;
-    }
 
-    .directors {
-        .director-grid {
-            &__card {
-                &__second__info {
-                    display: none;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100%;
-                    height: 100%;
-                    background-color: $dark-green;
-                    text-align: center;
-                    font-family: $liv, $sans;
-                    transition: all 0.5s ease-in-out;
-
-                    h3 {
-                        color: $rapture-blue;
-                    }
-
-                    q {
-                        color: $white;
-                        font-weight: 600;
-                        line-height: 1.75rem;
-                    }
-
-                    &__socials {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-evenly;
-                        width: 20%;
-                        margin: 0 auto;
-                    }
-
-                }
-            }
-        }
-    }
 
     .intro-container {
         background-color: $midnight-green;
@@ -346,6 +300,44 @@ img {
                     }
                 }
 
+                &__second__info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $dark-green;
+                    text-align: center;
+                    font-family: $liv, $sans;
+                    transition: all 0.5s ease-in-out;
+                    opacity: 0;
+                    top: 0;
+                    visibility: hidden;
+                    gap: 1rem;
+                    position: absolute;
+
+                    h3 {
+                        color: $rapture-blue;
+                    }
+
+                    q {
+                        color: $white;
+                        font-weight: 600;
+                        line-height: 1.75rem;
+                        width: 95%;
+                    }
+
+                    &__socials {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        width: 20%;
+                        margin: 0 auto;
+                    }
+
+                }
+
                 &__icon {
                     position: absolute;
                     top: calc(50% - 16px/2 + 112.5px);
@@ -358,6 +350,7 @@ img {
                     border: none;
                     background-color: $light-coral;
                     transition: all 250ms ease-in-out;
+                    z-index: 5;
 
                     &:hover,
                     &:focus {
@@ -365,7 +358,13 @@ img {
                         background-color: $rapture-blue;
 
                     }
+                    &[aria-expanded = true]~.director-grid__card__second__info{
+                        opacity: 1;
+                        visibility: visible;
+                    }
                 }
+
+
             }
         }
 

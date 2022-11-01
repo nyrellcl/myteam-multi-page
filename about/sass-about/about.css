@@ -131,42 +131,6 @@ img {
 }
 
 @media only screen and (min-width: 375px) {
-  .appear {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-  }
-  .remove {
-    display: none;
-  }
-  .directors .director-grid__card__second__info {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: #002529;
-    text-align: center;
-    font-family: "Livvic", sans-serif;
-    transition: all 0.5s ease-in-out;
-  }
-  .directors .director-grid__card__second__info h3 {
-    color: #79c8c7;
-  }
-  .directors .director-grid__card__second__info q {
-    color: white;
-    font-weight: 600;
-    line-height: 1.75rem;
-  }
-  .directors .director-grid__card__second__info__socials {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 20%;
-    margin: 0 auto;
-  }
   .intro-container {
     background-color: #014e56;
     background-image: url("/assets/bg-pattern-about-1-mobile-nav-1.svg");
@@ -291,6 +255,39 @@ img {
     width: 96px;
     height: 96px;
   }
+  .directors .director-grid__card__second__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #002529;
+    text-align: center;
+    font-family: "Livvic", sans-serif;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    top: 0;
+    visibility: hidden;
+    gap: 1rem;
+    position: absolute;
+  }
+  .directors .director-grid__card__second__info h3 {
+    color: #79c8c7;
+  }
+  .directors .director-grid__card__second__info q {
+    color: white;
+    font-weight: 600;
+    line-height: 1.75rem;
+    width: 95%;
+  }
+  .directors .director-grid__card__second__info__socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+    margin: 0 auto;
+  }
   .directors .director-grid__card__icon {
     position: absolute;
     top: calc(50% - 8px + 112.5px);
@@ -303,10 +300,15 @@ img {
     border: none;
     background-color: #f67e7e;
     transition: all 250ms ease-in-out;
+    z-index: 5;
   }
   .directors .director-grid__card__icon:hover, .directors .director-grid__card__icon:focus {
     cursor: pointer;
     background-color: #79c8c7;
+  }
+  .directors .director-grid__card__icon[aria-expanded=true] ~ .director-grid__card__second__info {
+    opacity: 1;
+    visibility: visible;
   }
   .clients {
     height: 90vh;

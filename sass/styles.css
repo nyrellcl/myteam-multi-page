@@ -232,13 +232,13 @@ img {
     margin-bottom: 48px;
     padding-top: 140px;
   }
-  .review-heading h2 {
+  .review-heading h4 {
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
     color: white;
   }
-  .review-heading h2 .review-highlight {
+  .review-heading h4 .review-highlight {
     color: #79c8c7;
   }
   .review-container {
@@ -268,7 +268,7 @@ img {
     font-size: 15px;
     font-weight: 600;
   }
-  .review-container__card h4 {
+  .review-container__card h5 {
     font-weight: 700;
     color: #79c8c7;
   }
