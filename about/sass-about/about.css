@@ -307,9 +307,18 @@ img {
     cursor: pointer;
     background-color: #79c8c7;
   }
+  .directors .director-grid__card__icon__cross {
+    transition: all 250ms linear;
+  }
   .directors .director-grid__card__icon[aria-expanded=true] ~ .director-grid__card__second__info {
     opacity: 1;
     visibility: visible;
+  }
+  .directors .director-grid__card__icon[aria-expanded=true] .director-grid__card__icon__cross {
+    transform: rotate(135deg);
+  }
+  .directors .director-grid__card__icon[aria-expanded=false] {
+    background-color: #f67e7e;
   }
   .clients {
     height: 90vh;

@@ -140,15 +140,7 @@ img {
     font-size: 1.125rem;
 }
 
-
-//appear info
-
-
-
 @media only screen and (min-width: 375px) {
-
-
-
     .intro-container {
         background-color: $midnight-green;
         background-image: url('/assets/bg-pattern-about-1-mobile-nav-1.svg');
@@ -359,10 +351,22 @@ img {
                         background-color: $rapture-blue;
 
                     }
-                    &[aria-expanded = true]~.director-grid__card__second__info{
+
+                    &__cross {
+                        transition: all 250ms linear;
+                    }
+
+                    &[aria-expanded=true]~.director-grid__card__second__info {
                         opacity: 1;
                         visibility: visible;
                     }
+                    &[aria-expanded=true] .director-grid__card__icon__cross {
+                        transform: rotate(135deg);
+                    }
+                    &[aria-expanded=false]{
+                        background-color: $light-coral;
+                    }
+
                 }
 
 
