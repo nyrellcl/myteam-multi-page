@@ -137,6 +137,8 @@ img {
     font-family: "Livvic", sans-serif;
     text-align: center;
     gap: 1.125rem;
+    height: 50vh;
+    justify-content: center;
   }
   .intro-container .talent-container__content h1 {
     font-size: 2.5rem;
