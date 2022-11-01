@@ -26,6 +26,36 @@ img {
     width: auto;
 }
 
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    height: 100vh;
+    position: fixed;
+    right: -100%;
+    width: 70%;
+    list-style: none;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    transition: all 0.3s linear;
+    background-color: $midnight-green;
+    background-image: url('/assets/bg-pattern-about-1-mobile-nav-1.svg');
+    background-repeat: no-repeat;
+    background-position: 200% bottom;
+    background-size: 200px 200px;
+    font-family: $liv, $sans;
+
+    a {
+        color: #000;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+}
+
 /*will rotate counterclockwise once user presses the icon which will form an X along with bar2*/
 .open {
     .bar1 {
@@ -43,19 +73,10 @@ img {
     }
 
     .mobile-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 3;
-        height: 100vh;
         margin-left: auto;
         top: 0;
-        width: 70%;
         right: 0;
         box-shadow: -1px 9px 90px 180px #2d324d59;
-        padding: 32px 0;
-        list-style: none;
         margin-top: 0;
         margin-bottom: 0;
 
@@ -71,28 +92,6 @@ img {
     }
 }
 
-
-/*once user opens the icon the links will display in a stacked view*/
-.mobile-menu {
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    height: calc(70vh - 50px);
-    width: 100%;
-    margin-top: 10px;
-    font-size: 1.5rem;
-    background-color: $midnight-green;
-    background-image: url('/assets/bg-pattern-about-1-mobile-nav-1.svg');
-    background-repeat: no-repeat;
-    background-position: 200% bottom;
-    background-size: 200px 200px;
-    font-family: $liv, $sans;
-
-    li {
-        margin-bottom: 10px;
-    }
-}
 
 .contact-btn {
     width: 159px;
