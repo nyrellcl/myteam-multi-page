@@ -15,7 +15,7 @@
     background-color: #fff;
     margin: 3px 0;
     transition: 0.4s;
-    z-index: 10;
+    z-index: 5;
 }
 
 img {
@@ -46,7 +46,6 @@ img {
     .mobile-menu {
         display: flex;
         flex-direction: column;
-        /*stacks each link on top of each other on mobile*/
         align-items: center;
         justify-content: center;
         z-index: 3;
@@ -56,7 +55,6 @@ img {
         width: 70%;
         right: 0;
         box-shadow: -1px 9px 90px 180px #2d324d59;
-        border-radius: 4px;
         padding: 32px 0;
         list-style: none;
         margin-top: 0;
