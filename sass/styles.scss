@@ -48,12 +48,14 @@ img {
     background-size: 200px 200px;
     font-family: $liv, $sans;
 
-    a {
-        color: #000;
-    }
-
     li {
-        margin-bottom: 10px;
+        padding: 0.5rem;
+
+        a {
+            color: $white;
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
     }
 }
 
@@ -79,16 +81,6 @@ img {
         box-shadow: -1px 9px 90px 180px #2d324d59;
         margin-top: 0;
         margin-bottom: 0;
-
-        li {
-            padding: 0.5rem;
-
-            a {
-                color: $white;
-                font-weight: 600;
-                font-size: 1.125rem;
-            }
-        }
     }
 }
 

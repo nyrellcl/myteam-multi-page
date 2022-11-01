@@ -48,11 +48,13 @@ img {
   background-size: 200px 200px;
   font-family: "Livvic", sans-serif;
 }
-.mobile-menu a {
-  color: #000;
-}
 .mobile-menu li {
-  margin-bottom: 10px;
+  padding: 0.5rem;
+}
+.mobile-menu li a {
+  color: white;
+  font-weight: 600;
+  font-size: 1.125rem;
 }
 
 /*will rotate counterclockwise once user presses the icon which will form an X along with bar2*/
@@ -71,14 +73,6 @@ img {
   box-shadow: -1px 9px 90px 180px rgba(45, 50, 77, 0.3490196078);
   margin-top: 0;
   margin-bottom: 0;
-}
-.open .mobile-menu li {
-  padding: 0.5rem;
-}
-.open .mobile-menu li a {
-  color: white;
-  font-weight: 600;
-  font-size: 1.125rem;
 }
 
 /*once user opens the icon the links will display in a stacked view*/
